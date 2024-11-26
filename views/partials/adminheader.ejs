@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="/css/personalized.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/design.css">
+
+    <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Page level plugin JavaScript-->
+    <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+    <title>KaraStudio - Panel administrativo</title>
+</head>
+
+<body>
+    <div class="flex h-screen overflow-hidden">
+        <% if(currentUser) { %>
+            <%- include('../partials/sidebar') -%>
+                <% } %>
+                    <div class="flex flex-col w-full items-center  bg-neutral-200">
+                        <header
+                            class="flex justify-between items-center w-11/12 mt-8 mb-6 px-14 py-8 bg-white shadow-lg rounded-md">
+                            <h1 id="titulo" class="font-bold text-4xl">Usuarios</h1>
+                            <!-- Search input -->
+                            <div class="flex items-center max-w-lg focus:">
+                                <input
+                                    class="px-6 py-3 mr-3 placeholder-neutral-400 border-2 border-black rounded-full transition-colors duration-200 focus:placeholder-black focus:border-accentBlue focus:outline-none focus:shadow-outline-purple"
+                                    type="text" placeholder="Buscar">
+                                <button
+                                    class="flex items-center p-2 bg-black rounded-full transition-colors duration-300 hover:bg-accentBlue"
+                                    type="button"><span
+                                        class="inline-block w-8 h-8 bg-search bg-cover bg-center"></span></button>
+                            </div>
+                        </header>

@@ -1,0 +1,67 @@
+<%- include('../partials/adminheader') -%>
+
+    <div class=" bg-white w-3/4 h-3/2 rounded-2xl shadow-lg overflow-y-auto">
+        <div class="flex flex-col items-center py-8">
+            <!-- datos generales -->
+            <div class="w-4/5">
+                <h2 class="text-2xl font-bold ">Actualizar Informacion Usuario</h2>
+                <%- include('../partials/messages') -%>
+                    <form action="/edituser/<%= user.id%>?_method=PUT" method="POST">
+                        <input type="hidden" name="_method" value="PUT">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-sm border-b border-black py-2">
+                                <label for="campo1">Nombres</label>
+                                <input
+                                    class="text-sm appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                                    type="text" value="<%= user.name %>" name="name" placeholder="Nombre" aria-label="Full name">
+                            </div>
+                            <div class="text-sm border-b border-black py-2">
+                                <label for="campo2">Apellidos</label>
+                                <input
+                                    class="text-sm appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                                    type="text" value="<%= user.lastname %>" name="lastname" placeholder="Apellido Paterno" aria-label="Full name">
+                            </div>
+                            <div class="text-sm border-b border-black py-2">
+                                <label for="campo4">Correo</label>
+                                <input
+                                    class="text-sm appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                                    type="email" value="<%= user.email %>" name="email" placeholder="Correo" aria-label="Full name">
+                            </div>
+                            <div class="text-sm border-b border-black py-2">
+                                <label for="campo4">Contacto</label>
+                                <input
+                                    class="text-sm appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                                    type="number" value="<%= user.contact %>" name="contact" placeholder="Contacto" aria-label="Full name">
+                            </div>
+                            <div class="text-sm border-b border-black py-2">
+                                <label for="campo7">Direccion</label>
+                                <input
+                                    class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                                    type="text" value="<%= user.address %>" name="address" placeholder="Calle" aria-label="Full name">
+                            </div>
+                            <div class="text-sm border-b border-black py-2">
+                                <label for="campo8">Estatus</label>
+                                <input
+                                    class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                                    type="text" value="<%= user.status %>" name="status" placeholder="Estatus" aria-label="Full name">
+                            </div>
+                        </div>
+            </div>
+            <!-- buttons -->
+            <div class="flex items-center justify-center w-full gap-6">
+                <button
+                    class="w-1/4 h-10 my-8 text-white bg-black rounded-2xl shadow-sm text-semibold transition duration-500 ease-in-out hover:bg-orange-950 hover:text-white transform hover:translate-y-1 hover:scale-110">
+                    Actualizar Usuario
+                </button>
+
+                <button id="cancel"
+                    class="w-1/4 h-10 my-8 text-white bg-black rounded-2xl shadow-sm text-semibold transition duration-500 ease-in-out hover:bg-orange-950 hover:text-white transform hover:translate-y-1 hover:scale-110">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+        </form>
+
+    </div>
+
+    <%- include('../partials/adminfooter') -%>

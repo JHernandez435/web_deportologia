@@ -1,0 +1,81 @@
+<%- include('../partials/homeheader') -%>
+
+    <%- include('../partials/messages') -%>
+        <main class="flex justify-center items-center pt-40 pb-16 bg-login bg-center bg-cover">
+            <section
+                class="relative flex flex-col items-center w-1/3 max-w-xl pt-16 pb-10 px-8 bg-[#ffffffb3] rounded-3xl">
+                <header class="w-full mb-10">
+                    <img class="absolute -top-20 left-1/2 -translate-x-1/2 invert" src="/img/logo-black.png"
+                        alt="Logo de Kara" />
+
+                    <div class="flex">
+                        <div class="inline-block basis-3/4">
+                            <p class="font-normal text-xl">Bienvenido</p>
+                            <h1 class="font-medium text-5xl">Registrarse</h1>
+                        </div>
+
+                        <a class="basis-1/4 text-[#8d8d8d]" href="/login">Tengo cuenta <span class="text-black">Iniciar
+                                sesión.</span></a>
+                    </div>
+                </header>
+
+                <form action="/signup" method="POST">
+                    <!-- email -->
+                    <div class="mb-8">
+                        <label for="email">Ingrese su correo electronico</label>
+                        <input type="text"
+                            class="w-full mt-3 py-4 px-6 rounded-lg outline outline-1 outline-[#ADADAD] focus:outline-2 focus:outline-[#4285F4]"
+                            id="email" name="email" placeholder="Correo electrocino" />
+                    </div>
+
+                    <div class="flex space-x-6">
+                        <!-- usuario -->
+                        <div class="mb-8">
+                            <label for="name">Nombres</label>
+                            <input type="text"
+                                class="w-full mt-3 py-4 px-6 rounded-lg outline outline-1 outline-[#ADADAD] focus:outline-2 focus:outline-[#4285F4]"
+                                id="name" name="name" placeholder="Nombre de usuario" />
+                        </div>
+
+                        <div class="mb-8">
+                            <label for="lastname">Apellidos</label>
+                            <input type="text"
+                                class="w-full mt-3 py-4 px-6 rounded-lg outline outline-1 outline-[#ADADAD] focus:outline-2 focus:outline-[#4285F4]"
+                                id="lastname" name="lastname" placeholder="Nombre de usuario" />
+                        </div>
+                    </div>
+                    <div class="flex space-x-6">
+                        <!-- contraseña -->
+                        <div class="mb-8">
+                            <label for="address">Direccion</label>
+                            <input type="text"
+                                class="w-full mt-3 py-4 px-6 rounded-lg outline outline-1 outline-[#ADADAD] focus:outline-2 focus:outline-[#4285F4]"
+                                id="address" name="address" placeholder="Direccion" />
+                        </div>
+
+                        <div class="mb-8">
+                            <label for="contact">Contacto</label>
+                            <input type="text"
+                                class="w-full mt-3 py-4 px-6 rounded-lg outline outline-1 outline-[#ADADAD] focus:outline-2 focus:outline-[#4285F4]"
+                                id="contact" name="contact" placeholder="Número de contacto" />
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <label for="password">Ingrese su contraseña</label>
+                        <input type="password"
+                            class="w-full mt-3 py-4 px-6 rounded-lg outline outline-1 outline-[#ADADAD] focus:outline-2 focus:outline-[#4285F4]"
+                            id="password" name="password" placeholder="Enter password" />
+                    </div>
+
+                    <!-- button submit -->
+                    <div class="flex justify-end">
+                        <button type="Submit" class="w-1/2 py-3 px-6 bg-black text-white text-center rounded-xl">
+                            Registrarse
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <%- include('../partials/homefooter') -%>

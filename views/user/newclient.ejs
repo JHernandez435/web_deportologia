@@ -1,0 +1,94 @@
+<%- include('../partials/adminheader') -%>
+
+    <div class=" bg-white w-3/4 h-3/2 rounded-2xl shadow-lg overflow-y-auto">
+        <form action="/user/new" method="post" id="form-new-client">
+            <div class="flex flex-col items-center pt-6">
+                <!-- datos generales -->
+                <div class="w-4/5">
+                    <h2 class="text-2xl font-bold mb-4">Datos Generales</h2>
+                    <div class="grid grid-cols-2 gap-5">
+                        <div class="text-sm">
+                            <label for="name">Nombres
+                                <input
+                                    class="text-sm appearance-none bg-transparent border-b border-black py-2 w-full text-gray-700 mr-3 px-2 leading-tight focus:outline-none"
+                                    id="name" name="name" type="text" placeholder="Nombre" aria-label="Full name">
+                            </label>
+
+                            <p id="nameError" class="text-red-500 text-xs mt-1 hidden">Error</p>
+                        </div>
+                        <div class="text-sm">
+                            <label for="lastname">Apellidos
+                                <input
+                                    class="text-sm appearance-none bg-transparent border-b border-black py-2 w-full text-gray-700 mr-3 px-2 leading-tight focus:outline-none"
+                                    id="lastname" name="lastname" type="text" placeholder="Apellido Paterno"
+                                    aria-label="Full name">
+                            </label>
+
+                            <p id="lastnameError" class="text-red-500 text-xs mt-1 hidden">Error</p>
+                        </div>
+                        <div class="text-sm">
+                            <label for="email">Correo
+                                <input
+                                    class="text-sm appearance-none bg-transparent border-b border-black py-2 w-full text-gray-700 mr-3 px-2 leading-tight focus:outline-none"
+                                    id="email" name="email" type="email" placeholder="Correo" aria-label="Full name">
+                            </label>
+
+                            <p id="emailError" class="text-red-500 text-xs mt-1 hidden">Error</p>
+                        </div>
+                        <div class="text-sm">
+                            <label for="contact">Contacto
+                                <input
+                                    class="text-sm appearance-none bg-transparent border-b border-black py-2 w-full text-gray-700 mr-3 px-2 leading-tight focus:outline-none"
+                                    id="contact" name="contact" type="phone" placeholder="Contacto"
+                                    aria-label="Full name">
+                            </label>
+
+                            <p id="contactError" class="text-red-500 text-xs mt-1 hidden">Error</p>
+                        </div>
+                        <div class="text-sm">
+                            <label for="address">Direccion
+                                <input
+                                    class="text-sm appearance-none bg-transparent border-b border-black py-2 w-full text-gray-700 mr-3 px-2 leading-tight focus:outline-none"
+                                    id="address" name="address" type="text" placeholder="Direccion"
+                                    aria-label="Full name">
+                            </label>
+
+                            <p id="addressError" class="text-red-500 text-xs mt-1 hidden">Error</p>
+                        </div>
+                        <div class="text-sm">
+                            <label for="status">Estatus
+                                <select name="status" id="status" class="text-sm appearance-none bg-transparent border-b border-black py-2 w-full text-gray-700 mr-3 px-2 leading-tight focus:outline-none">
+                                    <option value="Activo">Activo</option>
+                                    <option value="Inactivo">Inactivo</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="text-sm">
+                            <label for="password">Contraseña
+                                <input
+                                    class="text-sm appearance-none bg-transparent border-b border-black py-2 w-full text-gray-700 mr-3 px-2 leading-tight focus:outline-none"
+                                    id="password" name="password" type="password" placeholder="Contraseña"
+                                    aria-label="Full name">
+                            </label>
+
+                            <p id="passwordError" class="text-red-500 text-xs mt-1 hidden">Error</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- buttons -->
+                <div class="flex items-center justify-center w-full gap-6">
+                    <button id="resgistrar-usuario" type="button"
+                        class="w-1/4 h-10 my-6 text-white bg-black rounded-2xl shadow-sm text-semibold transition duration-500 ease-in-out hover:bg-orange-950 hover:text-white transform hover:translate-y-1 hover:scale-110">
+                        Registrar Usuario
+                    </button>
+
+                    <!-- <button id="cancel"
+                        class="w-1/4 h-10 my-8 text-white bg-black rounded-2xl shadow-sm text-semibold transition duration-500 ease-in-out hover:bg-orange-950 hover:text-white transform hover:translate-y-1 hover:scale-110">
+                        Cancelar
+                    </button> -->
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <%- include('../partials/adminfooter') -%>
